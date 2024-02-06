@@ -1,0 +1,123 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'CSS/memberStyle.css'%}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>AMS</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'image/favicon.png'%}">
+</head>
+
+<body>
+
+    <div class="container position-sticky top-0 " style="z-index: 10;">
+      {% include 'members/navbar.html' %}
+    </div>
+    <div class="cont">
+      <p class="text-white name mb-md-4"> Attendance Management System</p>
+      <p class=" question mb-md-4"> <span class="text">Eager to transfrom Attendance Management</span> ?</p>
+      <p class="text-white answer mb-md-4"> Yes, We've Got You!</p>
+      <p class="sign_up mt-5"><a href="/signup" target="_blank" rel="noopener noreferrer">Sign Up</a></p>
+    </div>
+    <section class="about pb-4" id="about-section">
+      <p class="text-center bold heading mb-0 mt-5">About AMS</p>
+      <p class="text-center lead BM">Benefits of AMS</p>
+      <div class="feature">
+        <div class="row m-4 m-md-3 justify-content-md-around">
+          <div class="div col-12 col-md-3 d-flex flex-column align-items-center px-2 py-4">
+            <img src="{%static 'image/accuracy.jpeg'%}" alt="" class="img-fluid">
+            <p class="title pt-1">Accuracy</p>
+            <p class="desc lead text-center">Reduces errors associated with manual attendance tracking.</p>
+          </div>
+          <div class="div col-12 col-md-3 d-flex flex-column align-items-center px-2 py-4 ">
+            <img src="{%static 'image/time.jpeg'%}" alt="" class="img-fluid">
+            <p class="title pt-1">TIME EFFICIENCY</p>
+            <p class="desc lead text-center">Automates the process, saving time for both employees and administrators.</p>
+          </div>
+          <div class="div col-12 col-md-3 d-flex flex-column align-items-center px-2 py-4 ">
+            <img src="{%static 'image/data-analysis.jpeg'%}" alt=""class="img-fluid">
+            <p class="title pt-1">DATA ANALYSIS</p>
+            <p class="desc lead text-center"> Enables data-driven insights for better decision-making.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="host-section p-5" id="host-section">
+      <div class="row ">
+        <div class="col-12 d-flex flex-column align-items-center">
+          <div class="host"><img src="{%static 'image/me.JPG'%}" alt="" srcset="" class="img-fluid"></div>
+          <p class="host-name text-white text-center pt-4 ">HOST - AMAN MISHRA</p>
+          <p class="host-desc text-center w-75">
+            I'm a college student deeply passionate about web development. My journey has taken me from experimenting with HTML and CSS to mastering JavaScript, Python, and more. I find joy in learning, problem-solving, and creating captivating web experiences. Let's connect and explore the dynamic world of web development together!</p>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section p-3" id="contact-section">
+      <p class=" mt-4 feedback-section-title text-white text-center fs-5">
+        Contact US
+      </p>
+      <div class="row p-3 justify-content-around">
+        <div class="col-10 col-md-6 bg-white border-rounded p-3 form-block h-100">
+          <form>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label feedback-label">Feedback: </label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn button">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="copyright text-center">
+      <p class="m-0 text-white py-4">Copyrights @ 2020, All rights reserved.</p>
+    </footer>
+
+
+  
+
+
+
+
+  <script src="{%static 'JS/app.js'%}"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+   crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+   integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+   crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <script>
+      var typed = new Typed('.text', {
+      strings: ['Eager to transfrom Attendance Management',
+          'Ready to Simplify Attendance Tracking',
+          'Looking for Hassle-Free Attendance Solutions',
+          'Seeking Precision in Attendance Management'],
+      typeSpeed: 50,
+      backSpeed:25,
+      backDelay:1500,
+      loop:true
+    });
+  
+    $(function () {
+        $(document).scroll(function () {
+          var $nav = $("#mainNavbar");
+          $nav.toggleClass("scroll", $(this).scrollTop() > $nav.height());
+        })
+      })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+{%load static%}
+<nav class="navbar navbar-expand-lg navbar-dark rounded " id="mainNavbar">
+  <div class="container d-flex justify-content-between">
+    <a class="navbar-brand" href="#"><img src=" {% static 'image/logo.png'%}" alt="" height="50px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+        <li class="nav-item px-3">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link " aria-current="page" href="#about-section">About</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#host-section">Host</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#contact-section" tabindex="-1" aria-disabled="true">Contact</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-2 mb-2 mb-lg-0">
+        <li class="nav-item px-3">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="/signup">Sign up</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

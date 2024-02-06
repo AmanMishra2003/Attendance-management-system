@@ -1,0 +1,15 @@
+{%extends 'testApp/index.html' %}
+
+
+
+{%block main%}
+<p class="h3 my-3 pt-2 border-top">Add lecture Details:</p>
+<form enctype="multipart/form-data" method="POST" aciton="/add">
+
+        {%csrf_token%}
+        {{form.as_p}}
+
+    <button type="submit" class="btn" style="color: #A072EF; background-color: #2B2A2F; transition: all .25s;">Add</button>
+</form>
+
+{%endblock main%} 

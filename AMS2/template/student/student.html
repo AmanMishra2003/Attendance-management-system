@@ -1,0 +1,49 @@
+{%extends 'testapp/index.html'%}
+
+{%block main%}
+    <div class="add">
+        <a href="/User/student/add">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="white" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>
+        </a>
+    </div>
+   <div class="container">
+        <h2>Student:</h2>
+        <p class="border-bottom border-dark py-3 px-2">
+            <form action="" method="get">
+                {%csrf_token%}
+                <select class="form-select" aria-label="Default select example" name="select">
+                    <option selected value="None">search by department name-</option>
+                    {%for s in stud%}
+                        <option value="{{d}}">{{s}}</option>
+                    {%endfor%}
+
+                </select>
+                <button class="btn btn-dark mt-2">Search</button>
+            </form>
+        </p>
+
+
+        <table class="table table-hover table-dark text-center">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Roll number:</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+                {%for x in req_data %}
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{x.std_name}}</td>
+                    <td>{{x.roll_number}}</td>
+                    <td><a href="/User/schedule/delete/{{x.id}}" class="btn" style="color: #A072EF; background-color: #2B2A2F; transition: all .25s;">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+   </div>
+{%endblock %}

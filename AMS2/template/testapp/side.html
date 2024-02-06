@@ -1,0 +1,73 @@
+{%load static%}
+
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark " style="width: 280px; height: 100vh;">
+    <a href="/home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <img src="{%static 'image/logo.png' %}" alt="" class="img-fluid">
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="/User/course" class="nav-link text-white" aria-current="page">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+            class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
+            <path
+              d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z" />
+            <path
+              d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z" />
+          </svg>
+          Courses
+        </a>
+      </li>
+      <li>
+        <a href="/User/schedule" class="nav-link text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+            class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+            <path
+              d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z" />
+          </svg>
+          Schedule
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+            class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+            <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+            <path fill-rule="evenodd"
+              d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+          </svg> 
+          Student
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+            class="bi bi-stickies-fill" viewBox="0 0 16 16">
+            <path d="M0 1.5V13a1 1 0 0 0 1 1V1.5a.5.5 0 0 1 .5-.5H14a1 1 0 0 0-1-1H1.5A1.5 1.5 0 0 0 0 1.5z" />
+            <path
+              d="M3.5 2A1.5 1.5 0 0 0 2 3.5v11A1.5 1.5 0 0 0 3.5 16h6.086a1.5 1.5 0 0 0 1.06-.44l4.915-4.914A1.5 1.5 0 0 0 16 9.586V3.5A1.5 1.5 0 0 0 14.5 2h-11zm6 8.5a1 1 0 0 1 1-1h4.396a.25.25 0 0 1 .177.427l-5.146 5.146a.25.25 0 0 1-.427-.177V10.5z" />
+          </svg>
+          Attendence
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-white">
+          
+           Attendace collection
+        </a>
+      </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+        <strong>{{request.user.username}}</strong>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1" >
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="/logout">Sign out</a></li>
+      </ul>
+    </div>
+  </div>

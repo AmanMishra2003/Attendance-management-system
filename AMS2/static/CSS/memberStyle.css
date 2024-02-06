@@ -1,0 +1,208 @@
+*,*:before,*::after{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 8rem;
+}
+
+.container:first-of-type{
+    z-index: 5 !important;
+}
+
+/* .navbar{
+    background-color: transparent;
+} */
+
+.navbar.scroll {
+    background-color: rgb(34,37,41);
+    transition: background 500ms;
+}
+
+.cont::before{
+    content: "";
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjg2NzEzfQ');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+.cont{
+     height: 80vh; 
+}
+.name{
+    margin-top: 10% !important;
+    margin-left: 5%;
+    font-size: large !important;
+}
+
+.cont>.question{
+    margin-left: 5%;
+    font-size: 3rem !important;
+    color: brown;
+}
+
+.cont>.answer{
+    margin-left: 5%;
+    font-size: larger !important;
+}
+.cont>.sign_up{
+    margin-left: 3%;
+}
+.sign_up>a{
+    margin-left: 3%;
+    text-decoration: none;
+    border-radius: 10%;
+    padding: 2.5% 5%;
+    background-color: white;
+    color: brown;
+    transition: background-color 500ms;
+    font-size: 1em;
+}
+.sign_up>a:hover{
+    transform: translateX(10px) !important;
+    background-color: brown;
+    color: white;
+}
+
+.about{
+    background-color: #fcfcfc;
+}
+.heading{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.BM{
+    font-size: .75rem !important;
+}
+
+.row>.div>img{
+    width: 474px !important;
+    aspect-ratio: 1/1!important;
+    object-fit: cover;
+}
+
+.row>div>.title{
+    font-size: 1.5rem !important;
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.row>div>.desc{
+    font-size: 1rem;
+    color: grey;
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.row>.div{
+    border-bottom: 2px solid rgba(128, 128, 128, 0.826);
+}
+
+.host{
+    position: relative;
+    text-align: center;
+    width: 40%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: auto;
+    z-index: 1;
+}
+.host::before{
+   content: "";
+   position: absolute;
+   aspect-ratio: 1/1;
+   width: 100%;
+   background-color: #e4e4e4;
+   top: -5px;
+   right: -9px;
+   border-radius: 50%;
+   z-index: -1;
+}
+
+.host>img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.host-section{
+    background: rgb(47,45,47);
+background: linear-gradient(146deg, rgba(47,45,47,1) 0%, rgba(186,189,189,1) 100%);
+}
+
+.host-name{
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.host-desc{
+    color: rgb(215, 212, 212);
+}
+
+.contact-section{
+    height: 60vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjg2NzEzfQ');
+    background-size: cover;
+}
+
+.form-block{
+    border-radius: 1rem;
+}
+
+.button{
+    background-color: brown !important;
+    color: white !important;
+    transition:  all 500ms;
+}
+.button:hover{
+    background-color: white !important;
+    color: brown !important;
+    outline: 2px solid brown;
+    
+    
+}
+
+.feedback-label{
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
+    color: brown;
+}
+
+.copyright{
+    background-color: rgb(35,37,41);
+}
+
+
+@media screen and (min-width: 800px) {
+    .row>div{
+        border: none;
+    }
+    .sign_up>a{
+        padding: 1% 3%;
+    }
+    .name{
+        font-size: larger !important;
+    }
+
+    .question{
+        font-size: 3.5rem !important;
+    }
+
+    .answer{
+        font-size: 1.5rem !important;
+    }
+    .host{
+        width: 20%;
+        aspect-ratio: 1/1;
+    }
+   
+  }

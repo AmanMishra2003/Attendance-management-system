@@ -1,0 +1,18 @@
+.add{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 3vh;
+    right: 2vw;
+}
+
+
+.btn:hover{
+    background-color: rgb(49,108,244)!important;
+    color: white !important;
+}
